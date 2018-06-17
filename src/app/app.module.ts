@@ -7,11 +7,13 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
 import {MatchComponent} from './match/match.component';
+import {TeamComponent} from './team/team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MatchComponent
+    MatchComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

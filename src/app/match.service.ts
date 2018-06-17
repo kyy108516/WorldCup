@@ -7,20 +7,20 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class MatchService {
-  private url = 'http://worldcup.sfg.io/';
+  private url = 'http://worldcup.sfg.io/matches/';
 
   constructor(private http: HttpClient) {
   }
 
   getAllMatches(): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}/matches/?by_date=ASC`);
+    return this.http.get<Match[]>(`${this.url}/?by_date=ASC`);
   }
 
   getCurrentMatches(): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}/matches/current`);
+    return this.http.get<Match[]>(`${this.url}/current`);
   }
 
   getMatchesByCountry(code: string): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}/matches/country?fifa_code=${code}`);
+    return this.http.get<Match[]>(`${this.url}/country?fifa_code=${code}`);
   }
 }
