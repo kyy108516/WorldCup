@@ -1,0 +1,6 @@
+<ul class="matches">
+  <li *ngFor="let match of matches">
+    <p>{{match?.home_team.country}}: {{match?.home_team.goals}} VS {{match?.away_team.country}}:
+      {{match?.away_team.goals}}</p>
+  </li>
+</ul>
