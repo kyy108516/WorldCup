@@ -8,6 +8,13 @@ import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
 import {MatchComponent} from './match/match.component';
 import {TeamComponent} from './team/team.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
+import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import {registerLocaleData} from '@angular/common';
+import zh from '@angular/common/locales/zh';
+
+registerLocaleData(zh);
 
 @NgModule({
   declarations: [
@@ -19,9 +26,12 @@ import {TeamComponent} from './team/team.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+    BrowserAnimationsModule,
+    FormsModule,
+    NgZorroAntdModule
   ],
-  providers: [],
+  providers: [{provide: NZ_I18N, useValue: zh_CN}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
