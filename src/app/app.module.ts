@@ -15,6 +15,7 @@ import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {AboutComponent} from './about/about.component';
 import {MatchDetailsComponent} from './match-details/match-details.component';
+import {TeamDetailsComponent} from './team-details/team-details.component';
 
 registerLocaleData(zh);
 
@@ -24,7 +25,8 @@ registerLocaleData(zh);
     MatchComponent,
     TeamComponent,
     AboutComponent,
-    MatchDetailsComponent
+    MatchDetailsComponent,
+    TeamDetailsComponent
   ],
   imports: [
     BrowserModule,
