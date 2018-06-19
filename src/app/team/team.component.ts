@@ -18,6 +18,6 @@ export class TeamComponent implements OnInit {
   }
 
   getAllTeams(): void {
-    this.teamService.getAllTeams().subscribe(teams => this.teams = teams);
+    this.teamService.getAllTeamsWithResults().subscribe(teams => this.teams = teams);
   }
 }

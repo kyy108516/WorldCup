@@ -4,10 +4,11 @@
       <nz-list-item-meta [nzTitle]="nzTitle">
         <ng-template #nzTitle>
           <a routerLink="/details/{{match?.fifa_id}}">
-            <nz-card style="width:80%;">
+            <nz-card style="width:100%;">
               <div nz-row>
-                <p><img src="../../assets/images/{{match?.home_team.country}}.png"/>{{match?.home_team.country}}: {{match?.home_team.goals}} VS <img src="../../assets/images/{{match?.away_team.country}}.png"/>{{match?.away_team.country}}:
-                  {{match?.away_team.goals}}</p>
+                <p><img src="../../assets/images/{{match?.home_team.country}}.png"/>{{match?.home_team.country}}:
+                  {{match?.home_team.goals}} VS {{match?.away_team.goals}}:
+                  {{match?.away_team.country}}<img src="../../assets/images/{{match?.away_team.country}}.png"/></p>
               </div>
             </nz-card>
           </a>

@@ -4,13 +4,11 @@ import {MatchComponent} from './match/match.component';
 import {TeamComponent} from './team/team.component';
 import {AboutComponent} from './about/about.component';
 import {MatchDetailsComponent} from './match-details/match-details.component';
-import {TeamDetailsComponent} from './team-details/team-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/matches', pathMatch: 'full'},
-  {path: 'matches', component: MatchComponent},
+  {path: 'matches/:id', component: MatchComponent},
   {path: 'countries', component: TeamComponent},
-  {path: 'countries/:id', component: TeamDetailsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'details/:id', component: MatchDetailsComponent}];
 
