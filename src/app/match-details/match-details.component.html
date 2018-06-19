@@ -1,1 +1,16 @@
-<p>{{match?.venue}}</p>
+<div style="background: #ECECEC;padding:30px;">
+  <div nz-row [nzGutter]="8">
+    <div nz-col [nzSpan]="12">
+      <nz-card nzTitle="{{match?.home_team.country}}">
+        <img src="../../assets/images/{{match?.home_team.country}}.png"/>
+        <p>进球数：{{match?.home_team.goals}}</p>
+      </nz-card>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <nz-card nzTitle="{{match?.away_team.country}}">
+        <img src="../../assets/images/{{match?.away_team.country}}.png"/>
+        <p>进球数：{{match?.away_team.goals}}</p>
+      </nz-card>
+    </div>
+  </div>
+</div>
