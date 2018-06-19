@@ -6,11 +6,12 @@ import {AboutComponent} from './about/about.component';
 import {MatchDetailsComponent} from './match-details/match-details.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/matches', pathMatch: 'full'},
+  {path: '', redirectTo: '/matches/current', pathMatch: 'full'},
   {path: 'matches/:id', component: MatchComponent},
-  {path: 'countries', component: TeamComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'details/:id', component: MatchDetailsComponent}];
+  {path: 'details/:id', component: MatchDetailsComponent},
+  {path: 'countries/:id', component: TeamComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
