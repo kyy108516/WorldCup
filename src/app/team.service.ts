@@ -8,7 +8,7 @@ import {Group} from './group';
   providedIn: 'root'
 })
 export class TeamService {
-  private url = 'http://worldcup.sfg.io/team/';
+  private url = 'http://worldcup.sfg.io/teams/';
 
   constructor(private http: HttpClient) {
   }

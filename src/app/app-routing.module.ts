@@ -8,9 +8,9 @@ import {MatchDetailsComponent} from './match-details/match-details.component';
 const routes: Routes = [
   {path: '', redirectTo: '/matches', pathMatch: 'full'},
   {path: 'matches', component: MatchComponent},
-  {path: 'teams', component: TeamComponent},
+  {path: 'countries', component: TeamComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'details', component: MatchDetailsComponent}];
+  {path: 'details/:id', component: MatchDetailsComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

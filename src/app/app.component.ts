@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {Location} from '@angular/common';
-import {MatchService} from './match.service';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +10,10 @@ export class AppComponent {
   title = 'WorldCup';
   isCollapsed = false;
 
-  constructor(private location: Location, private matchService: MatchService) {
+  constructor(private location: Location) {
   }
 
   goBack(): void {
     this.location.back();
-  }
-
-  click() {
-    this.matchService.getCurrentMatches().subscribe(match => this.matchService.match.next(match[0]));
   }
 }

@@ -3,7 +3,7 @@
     <nz-list-item>
       <nz-list-item-meta [nzTitle]="nzTitle">
         <ng-template #nzTitle>
-          <a (click)="click(match)" routerLink="/details">
+          <a routerLink="/details/{{match?.fifa_id}}">
             <nz-card style="width:80%;">
               <div nz-row>
                 <p>{{match?.home_team.country}}: {{match?.home_team.goals}} VS {{match?.away_team.country}}:
