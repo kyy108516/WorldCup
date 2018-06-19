@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {Match} from './match';
 import {HttpClient} from '@angular/common/http';
 
@@ -7,20 +7,25 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class MatchService {
-  private url = 'http://worldcup.sfg.io/matches/';
+  match = new BehaviorSubject<Match>(null);
+  private url = 'https://world-cup-json.herokuapp.com/matches/';
 
   constructor(private http: HttpClient) {
   }
 
+  getAllMatchesWithDetails(): Observable<Match[]> {
+    return this.http.get<Match[]>(`${this.url}?details=true`);
+  }
+
   getAllMatches(): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}/?by_date=ASC`);
+    return this.http.get<Match[]>(this.url);
   }
 
   getCurrentMatches(): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}/current`);
+    return this.http.get<Match[]>(`${this.url}current`);
   }
 
   getMatchesByCountry(code: string): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}/country?fifa_code=${code}`);
+    return this.http.get<Match[]>(`${this.url}country?fifa_code=${code}`);
   }
 }

@@ -1,6 +1,18 @@
-<ul class="matches">
-  <li *ngFor="let match of matches">
-    <p>{{match?.home_team.country}}: {{match?.home_team.goals}} VS {{match?.away_team.country}}:
-      {{match?.away_team.goals}}</p>
-  </li>
-</ul>
+<nz-list [nzDataSource]="matches" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
+  <ng-template #item let-match>
+    <nz-list-item>
+      <nz-list-item-meta [nzTitle]="nzTitle">
+        <ng-template #nzTitle>
+          <a (click)="click(match)" routerLink="/details">
+            <nz-card style="width:80%;">
+              <div nz-row>
+                <p>{{match?.home_team.country}}: {{match?.home_team.goals}} VS {{match?.away_team.country}}:
+                  {{match?.away_team.goals}}</p>
+              </div>
+            </nz-card>
+          </a>
+        </ng-template>
+      </nz-list-item-meta>
+    </nz-list-item>
+  </ng-template>
+</nz-list>

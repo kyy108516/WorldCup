@@ -3,3 +3,17 @@
   background: rgba(255, 255, 255, .2);
   margin: 16px;
 }
+
+nz-content {
+  padding-top: 40px;
+}
+
+nz-header {
+  background: #fff;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  z-index: 99999;
+}

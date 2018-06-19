@@ -14,6 +14,7 @@ import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
 import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {AboutComponent} from './about/about.component';
+import {MatchDetailsComponent} from './match-details/match-details.component';
 
 registerLocaleData(zh);
 
@@ -22,7 +23,8 @@ registerLocaleData(zh);
     AppComponent,
     MatchComponent,
     TeamComponent,
-    AboutComponent
+    AboutComponent,
+    MatchDetailsComponent
   ],
   imports: [
     BrowserModule,

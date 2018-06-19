@@ -4,7 +4,9 @@
 
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
-      <li nz-menu-item><span><i class="anticon anticon-user"></i><span class="nav-text">Current Match</span></span></li>
+      <li nz-menu-item><a (click)="click()" routerLink="/details"><span><i class="anticon anticon-user"></i><span
+        class="nav-text">Current Match</span></span></a>
+      </li>
       <li nz-menu-item><a routerLink="/matches"> <span><i class="anticon anticon-calendar"></i><span class="nav-text">Matches</span></span>
       </a></li>
       <li nz-menu-item><span><i class="anticon anticon-upload"></i><span class="nav-text">Teams</span></span></li>
@@ -14,9 +16,9 @@
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header style="background: #fff; padding:0; position:fixed; width:100%;">
-      <p style="text-align: center;">
-        {{title}}</p>
+    <nz-header
+      style="">
+      <p style="text-align: center;">{{title}}</p>
     </nz-header>
     <nz-content style="margin:24px 16px 0;">
       <div style="padding:24px; background: #fff; min-height: 360px;">
@@ -26,3 +28,4 @@
     <nz-footer style="text-align: center;">刘征宇 ©2018</nz-footer>
   </nz-layout>
 </nz-layout>
+<nz-back-top></nz-back-top>
