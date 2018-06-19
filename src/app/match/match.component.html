@@ -6,7 +6,7 @@
           <a routerLink="/details/{{match?.fifa_id}}">
             <nz-card style="width:80%;">
               <div nz-row>
-                <p>{{match?.home_team.country}}: {{match?.home_team.goals}} VS {{match?.away_team.country}}:
+                <p><img src="../../assets/images/{{match?.home_team.country}}.png"/>{{match?.home_team.country}}: {{match?.home_team.goals}} VS <img src="../../assets/images/{{match?.away_team.country}}.png"/>{{match?.away_team.country}}:
                   {{match?.away_team.goals}}</p>
               </div>
             </nz-card>
