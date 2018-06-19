@@ -15,6 +15,7 @@ import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {AboutComponent} from './about/about.component';
 import {MatchDetailsComponent} from './match-details/match-details.component';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
 registerLocaleData(zh);
 
@@ -33,7 +34,8 @@ registerLocaleData(zh);
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     BrowserAnimationsModule,
     FormsModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    InfiniteScrollModule
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
   bootstrap: [AppComponent]

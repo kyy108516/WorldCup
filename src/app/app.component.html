@@ -1,4 +1,4 @@
-<nz-layout>
+<nz-layout style="height: 100%;">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'">
     <div class="logo">
 
@@ -66,8 +66,8 @@
     <nz-header>
       <p style="text-align: center;">{{title}}</p>
     </nz-header>
-    <nz-content style="margin:24px 16px 0;">
-      <div style="padding:24px; background: #fff; min-height: 360px;">
+    <nz-content style="margin:24px 16px 0;  height: 100%">
+      <div style="padding:24px; background: #fff; height: 100%">
         <router-outlet></router-outlet>
       </div>
     </nz-content>

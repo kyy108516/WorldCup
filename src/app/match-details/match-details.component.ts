@@ -24,12 +24,16 @@ export class MatchDetailsComponent implements OnInit {
     if (id === 'current') {
       this.matchService.getCurrentMatches().subscribe(match => {
         this.match = match[0];
-        this.flag = true;
+        if (this.match != null) {
+          this.flag = true;
+        }
       });
     } else {
       this.matchService.getMatchById(id).subscribe(match => {
         this.match = match[0];
-        this.flag = true;
+        if (this.match != null) {
+          this.flag = true;
+        }
       });
     }
   }

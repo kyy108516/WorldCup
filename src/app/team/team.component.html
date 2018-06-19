@@ -1,17 +1,40 @@
-<nz-list [nzDataSource]="teams" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
-  <ng-template #item let-team>
-    <nz-list-item>
-      <nz-list-item-meta [nzTitle]="nzTitle">
-        <ng-template #nzTitle>
-          <a routerLink="/matches/{{team?.fifa_code}}">
-            <nz-card style="width:100%; ">
-              <div nz-row>
-                <p>{{team?.country}}</p>
-              </div>
-            </nz-card>
-          </a>
-        </ng-template>
-      </nz-list-item-meta>
-    </nz-list-item>
-  </ng-template>
-</nz-list>
+<div class="demo-infinite-container"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onScroll()"
+     [scrollWindow]="false"
+     style="height: 100%">
+  <nz-list [nzDataSource]="tempTeams"
+           [nzRenderItem]="item"
+           [nzItemLayout]="'horizontal'">
+    <ng-template #item let-team>
+      <nz-list-item>
+        <nz-list-item-meta [nzTitle]="nzTitle">
+          <ng-template #nzTitle>
+            <a routerLink="/matches/{{team?.fifa_code}}">
+              <nz-card style="width:100%;" nzTitle="{{team?.group_letter}} {{team?.country}}">
+                <div nz-row nzType="flex" nzJustify="center" nzAlign="middle" nzGutter="16">
+                  <img nz-col [nzSpan]="4" src="../../assets/images/{{team?.country}}.png">
+                  <div nz-col [nzSpan]="4">
+                    <p>Wins: {{team?.wins}}</p>
+                    <p>Draws: {{team?.draws}}</p>
+                    <p>Losses: {{team?.losses}}</p>
+                    <p>Games Played: {{team?.games_played}}</p>
+                  </div>
+                  <div nz-col [nzSpan]="4">
+                    <p>Points: {{team?.points}}</p>
+                    <p>Goals For: {{team?.goals_for}}</p>
+                    <p>Goals Against: {{team?.goals_against}}</p>
+                    <p>Goal Differential: {{team?.goals_for}}</p>
+                  </div>
+                </div>
+              </nz-card>
+            </a>
+          </ng-template>
+        </nz-list-item-meta>
+      </nz-list-item>
+    </ng-template>
+    <nz-spin *ngIf="loading && hasMore" class="demo-loading"></nz-spin>
+  </nz-list>
+</div>
