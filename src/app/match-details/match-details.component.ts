@@ -23,7 +23,7 @@ export class MatchDetailsComponent implements OnInit {
     if (id === 'current') {
       this.matchService.getCurrentMatches().subscribe(match => this.match = match[0]);
     } else {
-      this.matchService.getMatchByid(id).subscribe(match => this.match = match[0]);
+      this.matchService.getMatchById(id).subscribe(match => this.match = match[0]);
     }
   }
 }

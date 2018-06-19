@@ -1,0 +1,17 @@
+<nz-list [nzDataSource]="teams" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
+  <ng-template #item let-team>
+    <nz-list-item>
+      <nz-list-item-meta [nzTitle]="nzTitle">
+        <ng-template #nzTitle>
+          <a routerLink="/countries/{{team?.fifa_code}}">
+            <nz-card style="width:80%;">
+              <div nz-row>
+                <p>{{team?.country}}</p>
+              </div>
+            </nz-card>
+          </a>
+        </ng-template>
+      </nz-list-item-meta>
+    </nz-list-item>
+  </ng-template>
+</nz-list>

@@ -28,7 +28,7 @@ export class MatchService {
     return this.http.get<Match[]>(`${this.url}country?fifa_code=${code}`);
   }
 
-  getMatchByid(code: string): Observable<Match[]> {
+  getMatchById(code: string): Observable<Match[]> {
     return this.http.get<Match[]>(`${this.url}${code}`);
   }
 }

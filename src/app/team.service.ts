@@ -14,6 +14,10 @@ export class TeamService {
   }
 
   getAllTeams(): Observable<Team[]> {
+    return this.http.get<Team[]>(`${this.url}`);
+  }
+
+  getAllTeamsWithResults(): Observable<Team[]> {
     return this.http.get<Team[]>(`${this.url}results`);
   }
 
