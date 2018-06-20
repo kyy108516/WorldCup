@@ -10,6 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class MatchDetailsComponent implements OnInit {
   match: Match;
+  flag = false;
 
   constructor(private matchService: MatchService, private route: ActivatedRoute) {
   }
@@ -21,9 +22,19 @@ export class MatchDetailsComponent implements OnInit {
   getMatch() {
     const id = this.route.snapshot.paramMap.get('id');
     if (id === 'current') {
-      this.matchService.getCurrentMatches().subscribe(match => this.match = match[0]);
+      this.matchService.getCurrentMatches().subscribe(match => {
+        this.match = match[0];
+        if (this.match != null) {
+          this.flag = true;
+        }
+      });
     } else {
-      this.matchService.getMatchById(id).subscribe(match => this.match = match[0]);
+      this.matchService.getMatchById(id).subscribe(match => {
+        this.match = match[0];
+        if (this.match != null) {
+          this.flag = true;
+        }
+      });
     }
   }
 }

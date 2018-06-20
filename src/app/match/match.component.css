@@ -1,8 +1,10 @@
 img {
-  width: 16px;
-  height: 9px;
-}
-p {
   width: auto;
   height: auto;
+  max-width: 20%;
+  max-height: 20%;
+}
+
+p {
+  font-size: x-large;
 }
