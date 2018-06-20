@@ -1,4 +1,4 @@
-<div class="demo-infinite-container"
+<div class="infinite-container"
      infiniteScroll
      [infiniteScrollDistance]="2"
      [infiniteScrollThrottle]="50"
@@ -14,15 +14,16 @@
           <ng-template #nzTitle>
             <a routerLink="/matches/{{team?.fifa_code}}">
               <nz-card style="width:100%;" nzTitle="{{team?.group_letter}} {{team?.country}}">
-                <div nz-row nzType="flex" nzJustify="center" nzAlign="middle" nzGutter="16">
-                  <img nz-col [nzSpan]="4" src="../../assets/images/{{team?.country}}.png">
-                  <div nz-col [nzSpan]="4">
+                <div nz-row nzType="flex" nzJustify="center" nzAlign="middle" nzGutter="8">
+                  <img nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4"
+                       src="../../assets/images/{{team?.country}}.png">
+                  <div nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4">
                     <p>Wins: {{team?.wins}}</p>
                     <p>Draws: {{team?.draws}}</p>
                     <p>Losses: {{team?.losses}}</p>
                     <p>Games Played: {{team?.games_played}}</p>
                   </div>
-                  <div nz-col [nzSpan]="4">
+                  <div nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4">
                     <p>Points: {{team?.points}}</p>
                     <p>Goals For: {{team?.goals_for}}</p>
                     <p>Goals Against: {{team?.goals_against}}</p>
@@ -35,6 +36,6 @@
         </nz-list-item-meta>
       </nz-list-item>
     </ng-template>
-    <nz-spin *ngIf="loading && hasMore" class="demo-loading"></nz-spin>
+    <nz-spin *ngIf="loading && hasMore" class="loading"></nz-spin>
   </nz-list>
 </div>

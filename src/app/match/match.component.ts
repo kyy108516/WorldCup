@@ -9,21 +9,52 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./match.component.css']
 })
 export class MatchComponent implements OnInit {
+  tempMatches: Match[];
   matches: Match[];
+  loading = false;
+  hasMore = true;
+  cnt = 5;
 
-  constructor(private matchService: MatchService, private route: ActivatedRoute) {
+  constructor(private matchService: MatchService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.getAllMatches();
+    this.route.params
+      .subscribe(params =>
+        this.getAllMatches(params['id'])
+      );
   }
 
-  getAllMatches(): void {
-    const id = this.route.snapshot.paramMap.get('id');
+  getAllMatches(id: string): void {
     if (id === 'all') {
-      this.matchService.getAllMatches().subscribe(matches => this.matches = matches);
+      this.matchService.allMatches
+        .subscribe(matches => {
+          this.matches = matches;
+          this.tempMatches = this.matches.slice(0, this.cnt);
+        });
     } else {
-      this.matchService.getMatchesByCountry(id).subscribe(matches => this.matches = matches);
+      this.matchService.getMatchesByCountry(id)
+        .subscribe(matches => {
+          this.matches = matches;
+          this.tempMatches = this.matches.slice(0, this.cnt);
+        });
     }
+  }
+
+  onScroll(): void {
+    if (this.loading) {
+      return;
+    }
+    this.loading = true;
+    if (this.cnt >= this.matches.length) {
+      this.hasMore = false;
+      this.loading = false;
+      return;
+    }
+    console.log(this.cnt);
+    this.cnt += 5;
+    this.tempMatches = this.matches.slice(0, this.cnt);
+    this.loading = false;
   }
 }

@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +9,6 @@ export class AppComponent {
   title = 'WorldCup';
   isCollapsed = false;
 
-  constructor(private location: Location) {
-  }
-
-  goBack(): void {
-    this.location.back();
+  constructor() {
   }
 }

@@ -1,8 +1,5 @@
 <nz-layout style="height: 100%;">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'">
-    <div class="logo">
-
-    </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
       <li nz-menu-item>
         <a routerLink="/details/current">
@@ -62,16 +59,16 @@
       </li>
     </ul>
   </nz-sider>
-  <nz-layout>
+  <nz-layout style="height: 100%">
     <nz-header>
       <p style="text-align: center;">{{title}}</p>
     </nz-header>
-    <nz-content style="margin:24px 16px 0;  height: 100%">
+    <nz-content style="margin:50px 16px 0;  height: 80%">
       <div style="padding:24px; background: #fff; height: 100%">
         <router-outlet></router-outlet>
       </div>
     </nz-content>
-    <nz-footer style="text-align: center;">刘征宇 ©2018</nz-footer>
+    <nz-footer style="text-align: center; height: 10%">刘征宇 ©2018</nz-footer>
   </nz-layout>
 </nz-layout>
 <nz-back-top></nz-back-top>

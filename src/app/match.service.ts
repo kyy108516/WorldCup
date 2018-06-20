@@ -2,12 +2,14 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Match} from './match';
 import {HttpClient} from '@angular/common/http';
+import {shareReplay} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MatchService {
-  private url = 'https://world-cup-json.herokuapp.com/matches/';
+  allMatches = this.getAllMatches().pipe(shareReplay());
+  private url = 'https://worldcup.sfg.io/matches/';
 
   constructor(private http: HttpClient) {
   }

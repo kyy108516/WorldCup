@@ -1,19 +1,30 @@
-<nz-list [nzDataSource]="matches" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
-  <ng-template #item let-match>
-    <nz-list-item>
-      <nz-list-item-meta [nzTitle]="nzTitle">
-        <ng-template #nzTitle>
-          <a routerLink="/details/{{match?.fifa_id}}">
-            <nz-card style="width:100%;">
-              <div nz-row>
-                <p><img src="../../assets/images/{{match?.home_team.country}}.png"/>{{match?.home_team.country}}:
-                  {{match?.home_team.goals}} VS {{match?.away_team.goals}}:
-                  {{match?.away_team.country}}<img src="../../assets/images/{{match?.away_team.country}}.png"/></p>
-              </div>
-            </nz-card>
-          </a>
-        </ng-template>
-      </nz-list-item-meta>
-    </nz-list-item>
-  </ng-template>
-</nz-list>
+<div class="infinite-container"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onScroll()"
+     [scrollWindow]="false"
+     style="height: 100%">
+  <nz-list [nzDataSource]="tempMatches"
+           [nzRenderItem]="item"
+           [nzItemLayout]="'horizontal'">
+    <ng-template #item let-match>
+      <nz-list-item>
+        <nz-list-item-meta [nzTitle]="nzTitle">
+          <ng-template #nzTitle>
+            <a routerLink="/details/{{match?.fifa_id}}">
+              <nz-card style="width:100%;">
+                <div nz-row>
+                  <p><img src="../../assets/images/{{match?.home_team.country}}.png"/>{{match?.home_team.country}}:
+                    {{match?.home_team.goals}} VS {{match?.away_team.goals}}:
+                    {{match?.away_team.country}}<img src="../../assets/images/{{match?.away_team.country}}.png"/></p>
+                </div>
+              </nz-card>
+            </a>
+          </ng-template>
+        </nz-list-item-meta>
+      </nz-list-item>
+    </ng-template>
+    <nz-spin *ngIf="loading && hasMore" class="loading"></nz-spin>
+  </nz-list>
+</div>
