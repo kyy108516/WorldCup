@@ -12,6 +12,7 @@ export class MatchService {
   private url = 'https://worldcup.sfg.io/matches/';
 
   constructor(private http: HttpClient) {
+    this.allMatches = this.getAllMatches().pipe(shareReplay());
   }
 
   getAllMatchesWithDetails(): Observable<Match[]> {
