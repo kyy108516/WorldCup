@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TeamService} from '../team.service';
 import {Team} from '../team';
-import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
-import {NzMessageService} from 'ng-zorro-antd';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-team',
@@ -17,18 +16,13 @@ export class TeamComponent implements OnInit {
   cnt = 5;
 
   constructor(private teamService: TeamService,
-              private route: ActivatedRoute,
-              private router: Router,
-              private msg: NzMessageService) {
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.router.events
-      .subscribe(event => {
-        if (event instanceof NavigationEnd) {
-          this.getAllTeams();
-        }
-      });
+    this.route.params.subscribe(params =>
+      this.getAllTeams(params['id'])
+    );
   }
 
   onScroll(): void {
@@ -36,8 +30,7 @@ export class TeamComponent implements OnInit {
       return;
     }
     this.loading = true;
-    if (this.cnt > this.teams.length) {
-      this.msg.warning('Infinite List loaded all');
+    if (this.cnt >= this.teams.length) {
       this.hasMore = false;
       this.loading = false;
       return;
@@ -48,16 +41,17 @@ export class TeamComponent implements OnInit {
     this.loading = false;
   }
 
-  getAllTeams(): void {
-    const id = this.route.snapshot.paramMap.get('id');
+  getAllTeams(id: string): void {
+    // const id = this.route.snapshot.paramMap.get('id');
     if (id === 'all') {
-      this.teamService.getAllTeamsWithResults()
+      console.log('all');
+      this.teamService.allTeamsWithResults
         .subscribe(teams => {
           this.teams = teams;
           this.tempTeams = this.teams.slice(0, this.cnt);
         });
     } else {
-      this.teamService.getGroupResult()
+      this.teamService.groupResult
         .subscribe(teams => {
           this.teams = teams[id].group.teams.map(it => it.team);
           this.tempTeams = this.teams.slice(0, this.cnt);

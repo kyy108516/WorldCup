@@ -12,15 +12,17 @@ export class MatchDetailsComponent implements OnInit {
   match: Match;
   flag = false;
 
-  constructor(private matchService: MatchService, private route: ActivatedRoute) {
+  constructor(private matchService: MatchService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.getMatch();
+    this.route.params.subscribe(params =>
+      this.getMatch(params['id'])
+    );
   }
 
-  getMatch() {
-    const id = this.route.snapshot.paramMap.get('id');
+  getMatch(id: string) {
     if (id === 'current') {
       this.matchService.getCurrentMatches().subscribe(match => {
         this.match = match[0];

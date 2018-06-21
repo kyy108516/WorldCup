@@ -3,12 +3,15 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Team} from './team';
 import {Group} from './group';
+import {shareReplay} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamService {
-  private url = 'http://worldcup.sfg.io/teams/';
+  allTeamsWithResults = this.getAllTeamsWithResults().pipe(shareReplay());
+  groupResult = this.getGroupResult().pipe(shareReplay());
+  private url = 'https://worldcup.sfg.io/teams/';
 
   constructor(private http: HttpClient) {
   }

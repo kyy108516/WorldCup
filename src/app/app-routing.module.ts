@@ -6,7 +6,7 @@ import {AboutComponent} from './about/about.component';
 import {MatchDetailsComponent} from './match-details/match-details.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/matches/current', pathMatch: 'full'},
+  {path: '', redirectTo: '/details/current', pathMatch: 'full'},
   {path: 'matches/:id', component: MatchComponent},
   {path: 'about', component: AboutComponent},
   {path: 'details/:id', component: MatchDetailsComponent},
