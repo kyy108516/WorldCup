@@ -37,17 +37,17 @@ class Statistics {
   on_target: number;
   off_target: number;
   blocked: number;
-  woodwork: number;
-  corners: number;
-  offsides: number;
-  ball_possession: number;
+  woodwork: number; // 门框
+  corners: number; // 角球
+  offsides: number; // 越位
+  ball_possession: number; // 控球率
   pass_accuracy: number;
   num_passes: number;
   passes_completed: number;
   distance_covered: number;
-  balls_recovered: number;
-  tackles: number;
-  clearances: number;
+  balls_recovered: number; // 反抢成功次数
+  tackles: number; // 铲球
+  clearances: number; // 解围
   yellow_cards: number;
   red_cards: number;
   fouls_committed: number;

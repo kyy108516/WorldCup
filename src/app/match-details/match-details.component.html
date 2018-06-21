@@ -1,16 +1,119 @@
 <div *ngIf="flag" style="background: #ECECEC;padding:30px;">
-  <div nz-row [nzGutter]="8">
-    <div nz-col [nzSpan]="12">
-      <nz-card nzTitle="{{match?.home_team.country}}">
+  <div nz-row [nzGutter]="16">
+    <div nz-col nzMd="12" nzSm="24">
+      <nz-card nzTitle="{{match?.home_team.country}}" [nzCover]="cover1">
+        <nz-tabset [nzTabPosition]="'left'">
+          <nz-tab nzTitle="进攻">
+            <p>进球: {{match?.home_team.goals}}</p>
+            <p>射门: {{match?.home_team_statistics.attempts_on_goal}}</p>
+            <p>射正: {{match?.home_team_statistics.on_target}}</p>
+            <p>射偏: {{match?.home_team_statistics.off_target}}</p>
+            <p>被挡下: {{match?.home_team_statistics.blocked}}</p>
+            <p>射到门柱: {{match?.home_team_statistics.woodwork}}</p>
+            <p>角球: {{match?.home_team_statistics.corners}}</p>
+            <p>越位: {{match?.home_team_statistics.offsides}}</p>
+          </nz-tab>
+          <nz-tab nzTitle="表现">
+            <p>控球率: {{match?.home_team_statistics.ball_possession}}%</p>
+            <p>传球准确率: {{match?.home_team_statistics.pass_accuracy}}%</p>
+            <p>传球: {{match?.home_team_statistics.num_passes}}</p>
+            <p>传球完成数: {{match?.home_team_statistics.passes_completed}}</p>
+            <p>传球距离: {{match?.home_team_statistics.distance_covered}}km</p>
+          </nz-tab>
+          <nz-tab nzTitle="防守">
+            <p>抢断: {{match?.home_team_statistics.balls_recovered}}</p>
+            <p>铲球: {{match?.home_team_statistics.tackles}}</p>
+            <p>封赌: {{match?.away_team_statistics.blocked}}</p>
+            <p>解围: {{match?.home_team_statistics.clearances}}</p>
+          </nz-tab>
+          <nz-tab nzTitle="犯规">
+            <p>黄牌: {{match?.home_team_statistics.yellow_cards}}</p>
+            <p>红牌: {{match?.home_team_statistics.red_cards}}</p>
+            <p>犯规: {{match?.home_team_statistics.fouls_committed}}</p>
+          </nz-tab>
+          <nz-tab nzTitle="事件">
+            <nz-timeline *ngFor="let event of match?.home_team_events">
+              <nz-timeline-item *ngIf="event.type_of_event==='goal'|| event.type_of_event==='goal-penalty'"
+                                nzColor="green">
+                <p>{{event.time}} : {{event.player}}</p>
+                <p>{{event.type_of_event}}</p>
+              </nz-timeline-item>
+              <nz-timeline-item *ngIf="event.type_of_event==='yellow-card'|| event.type_of_event==='red-card'"
+                                nzColor="red">
+                <p>{{event.time}} : {{event.player}}</p>
+                <p>{{event.type_of_event}}</p>
+              </nz-timeline-item>
+              <nz-timeline-item
+                *ngIf="event.type_of_event==='substitution-in'|| event.type_of_event==='substitution-out'"
+                nzColor="blue">
+                <p>{{event.time}} : {{event.player}}</p>
+                <p>{{event.type_of_event}}</p>
+              </nz-timeline-item>
+            </nz-timeline>
+          </nz-tab>
+        </nz-tabset>
+      </nz-card>
+      <ng-template #cover1>
         <img src="../../assets/images/{{match?.home_team.country}}.png"/>
-        <p>进球数：{{match?.home_team.goals}}</p>
-      </nz-card>
+      </ng-template>
     </div>
-    <div nz-col [nzSpan]="12">
-      <nz-card nzTitle="{{match?.away_team.country}}">
-        <img src="../../assets/images/{{match?.away_team.country}}.png"/>
-        <p>进球数：{{match?.away_team.goals}}</p>
+    <div nz-col nzMd="12" nzSm="24">
+      <nz-card nzTitle="{{match?.away_team.country}}" [nzCover]="cover2">
+        <nz-tabset [nzTabPosition]="'left'">
+          <nz-tab nzTitle="进攻">
+            <p>进球: {{match?.away_team.goals}}</p>
+            <p>射门: {{match?.away_team_statistics.attempts_on_goal}}</p>
+            <p>射正: {{match?.away_team_statistics.on_target}}</p>
+            <p>射偏: {{match?.away_team_statistics.off_target}}</p>
+            <p>被挡下: {{match?.away_team_statistics.blocked}}</p>
+            <p>射到门柱: {{match?.away_team_statistics.woodwork}}</p>
+            <p>角球: {{match?.away_team_statistics.corners}}</p>
+            <p>越位: {{match?.away_team_statistics.offsides}}</p>
+          </nz-tab>
+          <nz-tab nzTitle="表现">
+            <p>控球率: {{match?.away_team_statistics.ball_possession}}%</p>
+            <p>传球准确率: {{match?.away_team_statistics.pass_accuracy}}%</p>
+            <p>传球: {{match?.away_team_statistics.num_passes}}</p>
+            <p>传球完成数: {{match?.away_team_statistics.passes_completed}}</p>
+            <p>传球距离: {{match?.away_team_statistics.distance_covered}}km</p>
+          </nz-tab>
+          <nz-tab nzTitle="防守">
+            <p>抢断: {{match?.away_team_statistics.balls_recovered}}</p>
+            <p>铲球: {{match?.away_team_statistics.tackles}}</p>
+            <p>封赌: {{match?.home_team_statistics.blocked}}</p>
+            <p>解围: {{match?.away_team_statistics.clearances}}</p>
+          </nz-tab>
+          <nz-tab nzTitle="犯规">
+            <p>黄牌: {{match?.away_team_statistics.yellow_cards}}</p>
+            <p>红牌: {{match?.away_team_statistics.red_cards}}</p>
+            <p>犯规: {{match?.away_team_statistics.fouls_committed}}</p>
+          </nz-tab>
+          <nz-tab nzTitle="事件">
+            <nz-timeline *ngFor="let event of match?.away_team_events">
+              <nz-timeline-item *ngIf="event.type_of_event==='goal'|| event.type_of_event==='goal-penalty'"
+                                nzColor="green">
+                <p>{{event.time}} : {{event.player}}</p>
+                <p>{{event.type_of_event}}</p>
+              </nz-timeline-item>
+              <nz-timeline-item *ngIf="event.type_of_event==='yellow-card'|| event.type_of_event==='red-card'"
+                                nzColor="red">
+                <p>{{event.time}} : {{event.player}}</p>
+                <p>{{event.type_of_event}}</p>
+              </nz-timeline-item>
+              <nz-timeline-item
+                *ngIf="event.type_of_event==='substitution-in'|| event.type_of_event==='substitution-out'"
+                nzColor="blue">
+                <p>{{event.time}} : {{event.player}}</p>
+                <p>{{event.type_of_event}}</p>
+              </nz-timeline-item>
+            </nz-timeline>
+          </nz-tab>
+        </nz-tabset>
       </nz-card>
+      <ng-template #cover2>
+        <img src="../../assets/images/{{match?.away_team.country}}.png"/>
+      </ng-template>
     </div>
   </div>
 </div>
+
