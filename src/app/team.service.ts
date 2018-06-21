@@ -14,6 +14,8 @@ export class TeamService {
   private url = 'https://worldcup.sfg.io/teams/';
 
   constructor(private http: HttpClient) {
+    this.allTeamsWithResults = this.getAllTeamsWithResults().pipe(shareReplay());
+    this.groupResult = this.getGroupResult().pipe(shareReplay());
   }
 
   getAllTeams(): Observable<Team[]> {
