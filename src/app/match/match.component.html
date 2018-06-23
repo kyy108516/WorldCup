@@ -4,7 +4,7 @@
      [infiniteScrollThrottle]="50"
      (scrolled)="onScroll()"
      [scrollWindow]="false"
-     style="height: 100%">
+     style="height:100%">
   <nz-list [nzDataSource]="tempMatches"
            [nzRenderItem]="item"
            [nzItemLayout]="'horizontal'">
@@ -13,14 +13,18 @@
         <nz-list-item-meta [nzTitle]="nzTitle">
           <ng-template #nzTitle>
             <a routerLink="/details/{{match?.fifa_id}}">
-              <nz-card style="width:100%;">
+              <nz-card style="width:100%;" nzTitle="{{match?.datetime.slice(0,10)}} {{match?.datetime.slice(11,19)}}">
                 <div nz-row nzType="flex" nzJustify="center" nzAlign="middle">
                   <img nz-col nzXs="6" nzSm="6" nzMd="6" nzLg="5" nzXl="4"
                        src="../../assets/images/{{match?.home_team.country}}.png"/>
-                  <p nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="10" nzXl="8" style="text-align: center">
+                  <p class="s" nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="10" nzXl="8" style="text-align: center">
                     {{match?.home_team.code}}:
                     {{match?.home_team.goals}} VS {{match?.away_team.goals}}:
                     {{match?.away_team.code}}</p>
+                  <p class="b" nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="10" nzXl="8" style="text-align: center">
+                    {{match?.home_team.country}}:
+                    {{match?.home_team.goals}} VS {{match?.away_team.goals}}:
+                    {{match?.away_team.country}}</p>
                   <img nz-col nzXs="6" nzSm="6" nzMd="6" nzLg="5" nzXl="4"
                        src="../../assets/images/{{match?.away_team.country}}.png"/>
                 </div>

@@ -1,0 +1,18 @@
+<nz-table #Table [nzData]="players">
+  <thead>
+  <tr>
+    <th>姓名</th>
+    <th>位置</th>
+    <th>国家</th>
+    <th>俱乐部</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of Table.data">
+    <td>{{data.name}}</td>
+    <td>{{data.position}}</td>
+    <td>{{data.country}}</td>
+    <td>{{data.club}}</td>
+  </tr>
+  </tbody>
+</nz-table>
