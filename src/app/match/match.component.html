@@ -14,14 +14,10 @@
           <ng-template #nzTitle>
             <a routerLink="/details/{{match?.fifa_id}}">
               <nz-card style="width:100%;">
-                <div nz-row nzType="flex" nzJustify="center" nzAlign="middle" nzGutter="16">
-                  <img nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4"
-                       src="../../assets/images/{{match?.home_team.country}}.png"/>
-                  <p nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="6" nzXl="6" [nzOffset]="1">{{match?.home_team.country}}:
+                <div nz-row>
+                  <p><img src="../../assets/images/{{match?.home_team.country}}.png"/>{{match?.home_team.country}}:
                     {{match?.home_team.goals}} VS {{match?.away_team.goals}}:
-                    {{match?.away_team.country}}</p>
-                  <img nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4" [nzOffset]="1"
-                       src="../../assets/images/{{match?.away_team.country}}.png"/>
+                    {{match?.away_team.country}}<img src="../../assets/images/{{match?.away_team.country}}.png"/></p>
                 </div>
               </nz-card>
             </a>

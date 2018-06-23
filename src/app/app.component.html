@@ -2,43 +2,65 @@
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'">
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
       <li nz-menu-item>
+        <a routerLink="/index">
+          <span><i class="anticon anticon-home"></i>
+            <span class="nav-text">首页</span></span>
+        </a>
+      </li>
+      <li nz-menu-item>
         <a routerLink="/details/current">
-          <span>
-            <i class="anticon anticon-user"></i>
-            <span class="nav-text">Current Match</span>
-          </span>
+          <span><i class="anticon anticon-user"></i>
+            <span class="nav-text">Current Match</span></span>
         </a>
       </li>
       <li nz-menu-item>
         <a routerLink="/matches/all">
-          <span>
-            <i class="anticon anticon-calendar"></i>
-            <span class="nav-text">Matches</span>
-          </span>
+          <span><i class="anticon anticon-calendar"></i>
+            <span class="nav-text">Matches</span></span>
         </a>
       </li>
       <li nz-menu-item>
         <a routerLink="/countries/all">
-          <span>
-            <i class="anticon anticon-upload"></i>
-            <span class="nav-text">Countries</span>
-          </span>
+          <span><i class="anticon anticon-upload"></i>
+            <span class="nav-text">Countries</span></span>
         </a>
       </li>
-      <li nz-menu-item>
-        <a routerLink="/countries/0">
+      <li nz-submenu>
           <span title>
             <i class="anticon anticon-appstore"></i>
-            <span class="nav-text">Group</span>
+            <span>Group</span>
           </span>
-        </a>
+        <ul>
+          <li nz-menu-item>
+            <a routerLink="/countries/0">A</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/countries/1">B</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/countries/2">C</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/countries/3">D</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/countries/4">E</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/countries/5">F</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/countries/6">G</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/countries/7">H</a>
+          </li>
+        </ul>
       </li>
       <li nz-menu-item>
         <a routerLink="/about">
-          <span>
-            <i class="anticon anticon-info"></i>
-            <span class="nav-text">About</span>
-          </span>
+          <span><i class="anticon anticon-info"></i>
+            <span class="nav-text">About</span></span>
         </a>
       </li>
     </ul>
