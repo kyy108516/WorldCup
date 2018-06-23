@@ -22,3 +22,9 @@ img {
   bottom: -40px;
   left: 50%;
 }
+
+@media all and (max-width: 1280px) {
+  p {
+    font-size: x-small;
+  }
+}

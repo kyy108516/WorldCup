@@ -1,4 +1,5 @@
-<nz-breadcrumb>
+<nz-breadcrumb *ngIf="flag">
+  Group:
   <nz-breadcrumb-item>
     <a [routerLink]="['/countries/0']">A</a>
   </nz-breadcrumb-item>
@@ -44,16 +45,16 @@
                 <div nz-row nzType="flex" nzJustify="center" nzAlign="middle" nzGutter="16">
                   <img nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4"
                        src="../../assets/images/{{team?.country}}.png">
-                  <div nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4">
-                    <p>Wins: {{team?.wins}}</p>
-                    <p>Draws: {{team?.draws}}</p>
-                    <p>Losses: {{team?.losses}}</p>
+                  <div nz-col nzXs="7" nzSm="7" nzMd="6" nzLg="5" nzXl="4" nzOffset="1">
+                    <p>胜: {{team?.wins}}</p>
+                    <p>平: {{team?.draws}}</p>
+                    <p>负: {{team?.losses}}</p>
                   </div>
                   <div nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4">
-                    <p>Points: {{team?.points}}</p>
-                    <p>Goals For: {{team?.goals_for}}</p>
-                    <p>Goals Against: {{team?.goals_against}}</p>
-                    <p>Goal Differential: {{team?.goal_differential}}</p>
+                    <p>积分: {{team?.points}}</p>
+                    <p>进球: {{team?.goals_for}}</p>
+                    <p>被进球: {{team?.goals_against}}</p>
+                    <p>净胜球: {{team?.goal_differential}}</p>
                   </div>
                 </div>
               </nz-card>
