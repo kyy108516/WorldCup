@@ -42,7 +42,6 @@ export class TeamComponent implements OnInit {
   }
 
   getAllTeams(id: string): void {
-    // const id = this.route.snapshot.paramMap.get('id');
     if (id === 'all') {
       this.teamService.allTeamsWithResults
         .subscribe(teams => {
