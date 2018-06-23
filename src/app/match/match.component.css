@@ -10,13 +10,6 @@ p {
   display: none;
 }
 
-img {
-  width: auto;
-  height: auto;
-  max-width: 20%;
-  max-height: 20%;
-}
-
 :host ::ng-deep .infinite-container {
   border: 1px solid #e8e8e8;
   border-radius: 4px;

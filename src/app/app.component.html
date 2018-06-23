@@ -1,5 +1,6 @@
 <nz-layout style="height: 100%;">
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'">
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'"
+            style="z-index: 99999">
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
       <li nz-menu-item>
         <a routerLink="/index">
@@ -44,6 +45,14 @@
           <span title>
             <i class="anticon anticon-appstore"></i>
             <span class="nav-text">Players</span>
+          </span>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a routerLink="/date">
+          <span title>
+            <i class="anticon anticon-appstore"></i>
+            <span class="nav-text">Date</span>
           </span>
         </a>
       </li>
