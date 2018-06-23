@@ -1,5 +1,3 @@
-<nz-calendar [(ngModel)]="selectedValue" (ngModelChange)="change(selectedValue)"></nz-calendar>
-<br>
 <nz-list [nzDataSource]="matches"
          [nzRenderItem]="item"
          [nzItemLayout]="'horizontal'">
@@ -30,3 +28,5 @@
     </nz-list-item>
   </ng-template>
 </nz-list>
+<br>
+<nz-calendar [(ngModel)]="selectedValue" (ngModelChange)="change(selectedValue)"></nz-calendar>
