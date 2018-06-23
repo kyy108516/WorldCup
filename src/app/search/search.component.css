@@ -10,6 +10,20 @@ p {
   display: none;
 }
 
+:host ::ng-deep .infinite-container {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 8px 24px;
+  height: 300px;
+}
+
+:host ::ng-deep .loading {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+}
+
 @media all and (max-width: 1024px) {
   p {
     font-size: small;
