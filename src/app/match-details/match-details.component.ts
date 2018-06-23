@@ -26,9 +26,7 @@ export class MatchDetailsComponent implements OnInit {
     if (id === 'current') {
       this.matchService.getCurrentMatches().pipe().subscribe(match => {
         this.match = match[0];
-        if (this.match != null) {
-          this.flag = true;
-        }
+        this.flag = this.match != null;
       });
     } else {
       this.matchService.getMatchById(id).subscribe(match => {

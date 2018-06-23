@@ -1,0 +1,25 @@
+p {
+  font-size: x-large;
+}
+
+.b {
+  display: block;
+}
+
+.s {
+  display: none;
+}
+
+@media all and (max-width: 1024px) {
+  p {
+    font-size: small;
+  }
+
+  .b {
+    display: none;
+  }
+
+  .s {
+    display: block;
+  }
+}

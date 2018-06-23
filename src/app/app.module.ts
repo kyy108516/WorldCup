@@ -15,7 +15,10 @@ import zh from '@angular/common/locales/zh';
 import {AboutComponent} from './about/about.component';
 import {MatchDetailsComponent} from './match-details/match-details.component';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
-import { IndexComponent } from './index/index.component';
+import {IndexComponent} from './index/index.component';
+import {PlayerComponent} from './player/player.component';
+import {SearchComponent} from './search/search.component';
+import {DateComponent} from './date/date.component';
 
 registerLocaleData(zh);
 
@@ -26,7 +29,10 @@ registerLocaleData(zh);
     TeamComponent,
     AboutComponent,
     MatchDetailsComponent,
-    IndexComponent
+    IndexComponent,
+    PlayerComponent,
+    SearchComponent,
+    DateComponent
   ],
   imports: [
     BrowserModule,

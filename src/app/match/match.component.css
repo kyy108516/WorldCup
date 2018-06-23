@@ -2,11 +2,12 @@ p {
   font-size: x-large;
 }
 
-img {
-  width: auto;
-  height: auto;
-  max-width: 20%;
-  max-height: 20%;
+.b {
+  display: block;
+}
+
+.s {
+  display: none;
 }
 
 :host ::ng-deep .infinite-container {
@@ -21,4 +22,18 @@ img {
   position: absolute;
   bottom: -40px;
   left: 50%;
+}
+
+@media all and (max-width: 1024px) {
+  p {
+    font-size: small;
+  }
+
+  .b {
+    display: none;
+  }
+
+  .s {
+    display: block;
+  }
 }

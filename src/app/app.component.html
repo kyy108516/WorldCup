@@ -1,66 +1,67 @@
 <nz-layout style="height: 100%;">
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'">
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'"
+            style="z-index: 99999">
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
       <li nz-menu-item>
         <a routerLink="/index">
           <span><i class="anticon anticon-home"></i>
-            <span class="nav-text">首页</span></span>
+            <span class="nav-text">Index</span></span>
         </a>
       </li>
       <li nz-menu-item>
         <a routerLink="/details/current">
-          <span><i class="anticon anticon-user"></i>
-            <span class="nav-text">Current Match</span></span>
+          <span>
+            <i class="anticon anticon-user"></i>
+            <span class="nav-text">Current Match</span>
+          </span>
         </a>
       </li>
       <li nz-menu-item>
         <a routerLink="/matches/all">
-          <span><i class="anticon anticon-calendar"></i>
-            <span class="nav-text">Matches</span></span>
+          <span>
+            <i class="anticon anticon-calendar"></i>
+            <span class="nav-text">Matches</span>
+          </span>
         </a>
       </li>
       <li nz-menu-item>
         <a routerLink="/countries/all">
-          <span><i class="anticon anticon-upload"></i>
-            <span class="nav-text">Countries</span></span>
+          <span>
+            <i class="anticon anticon-upload"></i>
+            <span class="nav-text">Countries</span>
+          </span>
         </a>
       </li>
-      <li nz-submenu>
+      <li nz-menu-item>
+        <a routerLink="/countries/0">
           <span title>
             <i class="anticon anticon-appstore"></i>
-            <span>Group</span>
+            <span class="nav-text">Group</span>
           </span>
-        <ul>
-          <li nz-menu-item>
-            <a routerLink="/countries/0">A</a>
-          </li>
-          <li nz-menu-item>
-            <a routerLink="/countries/1">B</a>
-          </li>
-          <li nz-menu-item>
-            <a routerLink="/countries/2">C</a>
-          </li>
-          <li nz-menu-item>
-            <a routerLink="/countries/3">D</a>
-          </li>
-          <li nz-menu-item>
-            <a routerLink="/countries/4">E</a>
-          </li>
-          <li nz-menu-item>
-            <a routerLink="/countries/5">F</a>
-          </li>
-          <li nz-menu-item>
-            <a routerLink="/countries/6">G</a>
-          </li>
-          <li nz-menu-item>
-            <a routerLink="/countries/7">H</a>
-          </li>
-        </ul>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a routerLink="/players">
+          <span title>
+            <i class="anticon anticon-appstore"></i>
+            <span class="nav-text">Players</span>
+          </span>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a routerLink="/date">
+          <span title>
+            <i class="anticon anticon-appstore"></i>
+            <span class="nav-text">Date</span>
+          </span>
+        </a>
       </li>
       <li nz-menu-item>
         <a routerLink="/about">
-          <span><i class="anticon anticon-info"></i>
-            <span class="nav-text">About</span></span>
+          <span>
+            <i class="anticon anticon-info"></i>
+            <span class="nav-text">About</span>
+          </span>
         </a>
       </li>
     </ul>
@@ -69,12 +70,9 @@
     <nz-header>
       <p style="text-align: center;">{{title}}</p>
     </nz-header>
-    <nz-content style="margin:50px 16px 0;  height: 80%">
-      <div style="padding:24px; background: #fff; height: 100%">
-        <router-outlet></router-outlet>
-      </div>
+    <nz-content style="margin:75px 16px 0; height: 90%">
+      <router-outlet></router-outlet>
     </nz-content>
-    <nz-footer style="text-align: center; height: 10%">刘征宇 ©2018</nz-footer>
   </nz-layout>
 </nz-layout>
 <nz-back-top></nz-back-top>

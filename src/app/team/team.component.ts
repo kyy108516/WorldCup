@@ -14,6 +14,7 @@ export class TeamComponent implements OnInit {
   loading = false;
   hasMore = true;
   cnt = 5;
+  flag = false;
 
   constructor(private teamService: TeamService,
               private route: ActivatedRoute) {
@@ -45,12 +46,14 @@ export class TeamComponent implements OnInit {
     if (id === 'all') {
       this.teamService.allTeamsWithResults
         .subscribe(teams => {
+          this.flag = false;
           this.teams = teams;
           this.tempTeams = this.teams.slice(0, this.cnt);
         });
     } else {
       this.teamService.groupResult
         .subscribe(teams => {
+          this.flag = true;
           this.teams = teams[id].group.teams.map(it => it.team);
           this.tempTeams = this.teams.slice(0, this.cnt);
         });

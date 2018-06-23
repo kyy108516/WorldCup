@@ -1,4 +1,9 @@
 <div *ngIf="flag" style="background: #ECECEC;padding:30px;">
+  <div nz-row [nzGutter]="16" style="font-size: small">
+    <p nz-col [nzSpan]="12">时间： {{match?.datetime.slice(0,10)}} {{match?.datetime.slice(11,19)}}</p>
+    <p nz-col [nzSpan]="6">地点： {{match?.venue}}</p>
+    <p nz-col [nzSpan]="6">场馆： {{match?.location}}</p>
+  </div>
   <div nz-row [nzGutter]="16">
     <div nz-col nzMd="12" nzSm="24">
       <nz-card nzTitle="{{match?.home_team.country}}" [nzCover]="cover1">
@@ -116,4 +121,3 @@
     </div>
   </div>
 </div>
-

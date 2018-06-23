@@ -15,8 +15,8 @@ export class MatchService {
     this.allMatches = this.getAllMatches().pipe(shareReplay());
   }
 
-  getAllMatchesWithDetails(): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}?details=true`);
+  getMatchesByDate(date: string): Observable<Match[]> {
+    return this.http.get<Match[]>(`${this.url}?start_date=${date}&details=false`);
   }
 
   getAllMatches(): Observable<Match[]> {
@@ -28,7 +28,7 @@ export class MatchService {
   }
 
   getMatchesByCountry(code: string): Observable<Match[]> {
-    return this.http.get<Match[]>(`${this.url}country?fifa_code=${code}`);
+    return this.http.get<Match[]>(`${this.url}country?fifa_code=${code}&details=false`);
   }
 
   getMatchById(code: string): Observable<Match[]> {
