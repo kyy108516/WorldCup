@@ -1,5 +1,8 @@
-<nz-calendar [(ngModel)]="selectedValue" (ngModelChange)="change(selectedValue)"></nz-calendar>
-<br>
+<label>
+  <input nz-input [(ngModel)]="value" [nzAutocomplete]="auto" (ngModelChange)="change(value)">
+</label>
+<nz-autocomplete [nzDataSource]="filteredOptions" #auto>
+</nz-autocomplete>
 <nz-list [nzDataSource]="matches"
          [nzRenderItem]="item"
          [nzItemLayout]="'horizontal'">

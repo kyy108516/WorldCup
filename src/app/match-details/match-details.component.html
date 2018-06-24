@@ -1,3 +1,4 @@
+<p *ngIf="!flag">当前没有比赛</p>
 <div *ngIf="flag" style="background: #ECECEC;padding:30px;">
   <div nz-row [nzGutter]="16" style="font-size: small">
     <p nz-col [nzSpan]="12">时间： {{match?.datetime.slice(0,10)}} {{match?.datetime.slice(11,19)}}</p>
