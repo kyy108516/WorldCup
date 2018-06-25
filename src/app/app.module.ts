@@ -20,6 +20,7 @@ import {PlayerComponent} from './player/player.component';
 import {SearchComponent} from './search/search.component';
 import {DateComponent} from './date/date.component';
 import {AuthorComponent} from './author/author.component';
+import {NewsComponent} from './news/news.component';
 
 registerLocaleData(zh);
 
@@ -34,7 +35,8 @@ registerLocaleData(zh);
     PlayerComponent,
     SearchComponent,
     DateComponent,
-    AuthorComponent
+    AuthorComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
