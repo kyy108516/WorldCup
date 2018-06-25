@@ -76,63 +76,62 @@
   <div style="background-color: green">
     <div style="text-align: center"><img src="../../assets/images/logo2.png"></div>
     <ul nz-row>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a routerLink="/author">
-            <img src="../../assets/images/meixi.png" class="author">
-          </a>
-        </div>
-
-      </li>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a>
-            <img src="../../assets/images/cluo.png" class="author">
-          </a>
-        </div>
-      </li>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a>
-            <img src="../../assets/images/geliziman.png" class="author">
-          </a>
-        </div>
-      </li>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a>
-            <img src="../../assets/images/jluo.png" class="author">
-          </a>
-        </div>
-      </li>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a>
-            <img src="../../assets/images/suyaleisi.png" class="author">
-          </a>
-        </div>
-      </li>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a>
-            <img src="../../assets/images/neimaer.png" class="author">
-          </a>
-        </div>
-      </li>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a>
-            <img src="../../assets/images/yiniesita.png" class="author">
-          </a>
-        </div>
-      </li>
-      <li nz-col [nzSpan]="6">
-        <div>
-          <a>
-            <img src="../../assets/images/mule.png" class="author">
-          </a>
-        </div>
-      </li>
+      <a routerLink="/author/{{author.id}}" *ngFor="let author of authors">
+        <li nz-col [nzSpan]="6">
+          <div>
+            <img src="../../assets/images/{{author.code}}.png" class="author">
+          </div>
+        </li>
+      </a>
+      <!--<li nz-col [nzSpan]="6">-->
+      <!--<div>-->
+      <!--<a>-->
+      <!--<img src="../../assets/images/cluo.png" class="author">-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
+      <!--<li nz-col [nzSpan]="6">-->
+      <!--<div>-->
+      <!--<a>-->
+      <!--<img src="../../assets/images/geliziman.png" class="author">-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
+      <!--<li nz-col [nzSpan]="6">-->
+      <!--<div>-->
+      <!--<a>-->
+      <!--<img src="../../assets/images/jluo.png" class="author">-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
+      <!--<li nz-col [nzSpan]="6">-->
+      <!--<div>-->
+      <!--<a>-->
+      <!--<img src="../../assets/images/suyaleisi.png" class="author">-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
+      <!--<li nz-col [nzSpan]="6">-->
+      <!--<div>-->
+      <!--<a>-->
+      <!--<img src="../../assets/images/neimaer.png" class="author">-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
+      <!--<li nz-col [nzSpan]="6">-->
+      <!--<div>-->
+      <!--<a>-->
+      <!--<img src="../../assets/images/yiniesita.png" class="author">-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
+      <!--<li nz-col [nzSpan]="6">-->
+      <!--<div>-->
+      <!--<a>-->
+      <!--<img src="../../assets/images/mule.png" class="author">-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
     </ul>
   </div>
 </div>

@@ -1,84 +1,78 @@
 <div nz-row class="l">
   <div nz-col [nzSpan]="9" [nzOffset]="3">
     <div>
-      <h2 style="font-size: xx-large;color: dodgerblue">&nbsp;&nbsp;&nbsp;&nbsp;梅西</h2>
+      <h2 style="font-size: xx-large;color: dodgerblue">&nbsp;&nbsp;&nbsp;&nbsp;{{authors[id].name}}</h2>
     </div>
     <div>
       <ul>
         <li>
           <span>球队:</span>
-          <span>阿根廷</span>
+          <span>{{authors[id].team}}</span>
         </li>
         <li>
           <span>出生日期:</span>
-          <span>1987年6月24日</span>
+          <span>{{authors[id].birthdate}}</span>
         </li>
         <li>
           <span>身高:</span>
-          <span>1.7米</span>
+          <span>{{authors[id].height}}</span>
         </li>
         <li>
           <span>体重：</span>
-          <span>72公斤</span>
+          <span>{{authors[id].weight}}</span>
         </li>
         <li>
           <span>球衣号:</span>
-          <span>10号</span>
+          <span>{{authors[id].number}}</span>
         </li>
         <li>
           <span>场上位置：</span>
-          <span>前锋</span>
+          <span>{{authors[id].place}}</span>
         </li>
-        <li>
-          <span>当前战绩：</span>
-          <span>0-1-1</span>
-        </li>
+
       </ul>
     </div>
   </div>
   <div nz-col [nzSpan]="12">
-    <img src="../../assets/images/bigmeixi.jpg" style="width: 100%;">
+    <img src="../../assets/images/big{{authors[id].code}}.jpg" style="width: 100%;">
   </div>
 </div>
 
 <div nz-row class="s">
   <div nz-col [nzSpan]="24">
-    <img src="../../assets/images/bigmeixi.jpg" style="width: 100%;">
+    <img src="../../assets/images/big{{authors[id].code}}.jpg" style="width: 100%;">
   </div>
   <div nz-col [nzSpan]="24">
     <div>
-      <h2 style="font-size: xx-large;color: dodgerblue">&nbsp;&nbsp;&nbsp;&nbsp;梅西</h2>
+      <h2 style="font-size: xx-large;color: dodgerblue">&nbsp;&nbsp;&nbsp;&nbsp;{{authors[id].name}}</h2>
     </div>
     <div>
       <ul>
         <li>
           <span>球队:</span>
-          <span>阿根廷</span>
+          <span>{{authors[id].team}}</span>
         </li>
         <li>
           <span>出生日期:</span>
-          <span>1987年6月24日</span>
+          <span>{{authors[id].birthdate}}</span>
         </li>
         <li>
           <span>身高:</span>
-          <span>1.7米</span>
+          <span>{{authors[id].height}}</span>
         </li>
         <li>
           <span>体重：</span>
-          <span>72公斤</span>
+          <span>{{authors[id].weight}}</span>
         </li>
         <li>
           <span>球衣号:</span>
-          <span>10号</span>
+          <span>{{authors[id].number}}</span>
         </li>
         <li>
           <span>场上位置：</span>
-          <span>前锋</span>
+          <span>{{authors[id].place}}</span>
         </li>
-        <li>
-          <span>当前战绩：</span>
-          <span>0-1-1</span>
-        </li>
+
       </ul>
     </div>
   </div>

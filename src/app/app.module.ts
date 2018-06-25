@@ -19,8 +19,7 @@ import {IndexComponent} from './index/index.component';
 import {PlayerComponent} from './player/player.component';
 import {SearchComponent} from './search/search.component';
 import {DateComponent} from './date/date.component';
-import { MeixiComponent } from './author/meixi.component';
-import { AuthorComponent } from './author/author.component';
+import {AuthorComponent} from './author/author.component';
 
 registerLocaleData(zh);
 
@@ -35,7 +34,6 @@ registerLocaleData(zh);
     PlayerComponent,
     SearchComponent,
     DateComponent,
-    MeixiComponent,
     AuthorComponent
   ],
   imports: [
