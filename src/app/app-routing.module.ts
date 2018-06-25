@@ -9,6 +9,7 @@ import {PlayerComponent} from './player/player.component';
 import {DateComponent} from './date/date.component';
 import {SearchComponent} from './search/search.component';
 import {AuthorComponent} from './author/author.component';
+import {NewsComponent} from './news/news.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'players', component: PlayerComponent},
   {path: 'date', component: DateComponent},
   {path: 'search', component: SearchComponent},
-  {path: 'author', component: AuthorComponent}
+  {path: 'author', component: AuthorComponent},
+  {path: 'news', component: NewsComponent}
 ];
 
 @NgModule({

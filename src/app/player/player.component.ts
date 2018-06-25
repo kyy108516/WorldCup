@@ -1991,7 +1991,7 @@ export class PlayerComponent implements OnInit {
     'name': 'Ronald Matarrita',
     'position': 'DEF',
     'country': 'Costa Rica',
-    'club': 'New York City'
+    'club': 'News York City'
   }, {
     'name': 'Bryan Oviedo',
     'position': 'DEF',
@@ -2046,7 +2046,7 @@ export class PlayerComponent implements OnInit {
     'name': 'Rodney Wallace',
     'position': 'MID',
     'country': 'Costa Rica',
-    'club': 'New York City'
+    'club': 'News York City'
   }, {
     'name': 'Bryan Ruiz',
     'position': 'MID',
@@ -3041,7 +3041,7 @@ export class PlayerComponent implements OnInit {
     'name': 'Fidel Escobar',
     'position': 'DEF',
     'country': 'Panama',
-    'club': 'New York Red Bulls'
+    'club': 'News York Red Bulls'
   }, {
     'name': 'Adolfo Machado',
     'position': 'DEF',
@@ -3051,7 +3051,7 @@ export class PlayerComponent implements OnInit {
     'name': 'Michael Murillo',
     'position': 'DEF',
     'country': 'Panama',
-    'club': 'New York Red Bulls'
+    'club': 'News York Red Bulls'
   }, {
     'name': 'Luis Ovalle',
     'position': 'DEF',
