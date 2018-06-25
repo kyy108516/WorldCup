@@ -1,5 +1,6 @@
 export class Author {
   id: number;
+  code: String;
   name: String;
   team: String;
   birthdate: String;

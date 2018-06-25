@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'players', component: PlayerComponent},
   {path: 'date', component: DateComponent},
   {path: 'search', component: SearchComponent},
-  {path: 'author', component: AuthorComponent},
+  {path: 'author/:id', component: AuthorComponent}
   {path: 'news', component: NewsComponent}
 ];
 
