@@ -1,0 +1,24 @@
+ul li{
+  list-style: none;
+  margin-top: 5%;
+  font-size: large;
+  color: dodgerblue;
+}
+
+.l{
+  display: block;
+}
+.s{
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+
+  .l {
+    display: none;
+  }
+
+  .s {
+    display: block;
+  }
+}

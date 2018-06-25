@@ -9,12 +9,12 @@
            [nzRenderItem]="item"
            [nzItemLayout]="'horizontal'">
     <ng-template #item let-match>
-      <nz-list-item>
+      <nz-list-item >
         <nz-list-item-meta [nzTitle]="nzTitle">
-          <ng-template #nzTitle>
+          <ng-template #nzTitle >
             <a routerLink="/details/{{match?.fifa_id}}">
-              <nz-card style="width:100%;" nzTitle="{{match?.datetime.slice(0,10)}} {{match?.datetime.slice(11,19)}}">
-                <div nz-row nzType="flex" nzJustify="center" nzAlign="middle">
+              <nz-card style="width:100%; background-color: darkgray;" nzTitle="{{match?.datetime.slice(0,10)}} {{match?.datetime.slice(11,19)}}">
+                <div nz-row nzType="flex" nzJustify="center" nzAlign="middle" >
                   <img nz-col nzXs="6" nzSm="6" nzMd="6" nzLg="5" nzXl="4"
                        src="../../assets/images/{{match?.home_team.country}}.png"/>
                   <p class="s" nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="10" nzXl="8" style="text-align: center">
