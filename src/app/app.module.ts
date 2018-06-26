@@ -21,6 +21,7 @@ import {SearchComponent} from './search/search.component';
 import {DateComponent} from './date/date.component';
 import {AuthorComponent} from './author/author.component';
 import {NewsComponent} from './news/news.component';
+import {DisqusModule} from 'ngx-disqus';
 
 registerLocaleData(zh);
 
@@ -46,7 +47,8 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     FormsModule,
     NgZorroAntdModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    DisqusModule.forRoot('WorldCup2018')
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
   bootstrap: [AppComponent]
