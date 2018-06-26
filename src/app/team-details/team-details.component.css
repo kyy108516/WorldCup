@@ -1,0 +1,31 @@
+.l{
+  display: block;
+}
+
+.s{
+  display: none;
+}
+
+.bf{
+  font-size: xx-large;
+  font-weight: bold
+}
+
+.sf{
+  font-size: large;
+  font-weight: normal;
+}
+@media all and (max-width: 768px) {
+  .sf{
+    font-size: small;
+  }
+  .bf{
+    font-size: medium;
+  }
+  .l{
+    display: none;
+  }
+  .s{
+    display: block;
+  }
+}

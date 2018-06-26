@@ -10,6 +10,7 @@ import {DateComponent} from './date/date.component';
 import {SearchComponent} from './search/search.component';
 import {AuthorComponent} from './author/author.component';
 import {NewsComponent} from './news/news.component';
+import {TeamDetailsComponent} from './team-details/team-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'date', component: DateComponent},
   {path: 'search', component: SearchComponent},
   {path: 'author/:id', component: AuthorComponent},
-  {path: 'news', component: NewsComponent}
+  {path: 'news', component: NewsComponent},
+  {path: 'team_details/:id', component: TeamDetailsComponent}
 ];
 
 @NgModule({

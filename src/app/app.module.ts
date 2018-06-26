@@ -21,6 +21,7 @@ import {SearchComponent} from './search/search.component';
 import {DateComponent} from './date/date.component';
 import {AuthorComponent} from './author/author.component';
 import {NewsComponent} from './news/news.component';
+import { TeamDetailsComponent } from './team-details/team-details.component';
 
 registerLocaleData(zh);
 
@@ -36,7 +37,8 @@ registerLocaleData(zh);
     SearchComponent,
     DateComponent,
     AuthorComponent,
-    NewsComponent
+    NewsComponent,
+    TeamDetailsComponent
   ],
   imports: [
     BrowserModule,
