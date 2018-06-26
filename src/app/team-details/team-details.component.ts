@@ -2549,117 +2549,117 @@ export class TeamDetailsComponent implements OnInit {
   }, {
     'name': 'Kim Seung-gyu',
     'position': 'GK',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Vissel Kobe'
   }, {
     'name': 'Kim Jin-hyeon',
     'position': 'GK',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Cerezo Osaka'
   }, {
     'name': 'Cho Hyun-woo',
     'position': 'GK',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Daegu FC'
   }, {
     'name': 'Kim Young-gwon',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Guangzhou Evergrande'
   }, {
     'name': 'Jang Hyun-soo',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'FC Tokyo'
   }, {
     'name': 'Jung Seung-hyun',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Sagan Tosu'
   }, {
     'name': 'Yun Yong-sun',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Seongnam FC'
   }, {
     'name': 'Oh Ban-suk',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Jeju United'
   }, {
     'name': 'Kim Min-woo',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Sangju Sangmu'
   }, {
     'name': 'Park Joo-ho',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Ulsan Hyundai'
   }, {
     'name': 'Hong Chul',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Sangju Sangmu'
   }, {
     'name': 'Go Yo-han',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'FC Seoul'
   }, {
     'name': 'Lee Yong',
     'position': 'DEF',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Jeonbuk Hyundai Motors'
   }, {
     'name': 'Ki Sung-yueng',
     'position': 'MID',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Swansea City'
   }, {
     'name': 'Jung Woo-young',
     'position': 'MID',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Vissel Kobe'
   }, {
     'name': 'Ju Se-jong',
     'position': 'MID',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Asan Mugunghwa FC'
   }, {
     'name': 'Koo Ja-cheol',
     'position': 'MID',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'FC Augsburg'
   }, {
     'name': 'Lee Jae-sung',
     'position': 'MID',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Jeonbuk Hyundai Motors'
   }, {
     'name': 'Lee Seung-woo',
     'position': 'MID',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Hellas Verona'
   }, {
     'name': 'Moon Seon-min',
     'position': 'MID',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Incheon United'
   }, {
     'name': 'Kim Shin-wook',
     'position': 'ATT',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Jeonbuk Hyundai Motors'
   }, {
     'name': 'Son Heung-min',
     'position': 'ATT',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'Tottenham Hotspur'
   }, {
     'name': 'Hwang Hee-chan',
     'position': 'ATT',
-    'country': 'South Korea',
+    'country': 'Korea Republic',
     'club': 'FC Red Bull Salzburg'
   }, {
     'name': 'Robin Olsen',
