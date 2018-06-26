@@ -1,0 +1,68 @@
+
+<div class="l">
+  <div nz-row style="margin-top: 10px;height: 100%;background-image: url(../../assets/images/teambackground.png)">
+    <div nz-col [nzSpan]="8" [nzOffset]="2">
+      <p style="" class="bf">{{team.country}}</p>
+      <img src="../../assets/images/{{team.country}}.png" style="width: 30%;height: 30%">
+      <p style="margin-top: 10%" class="sf">当前战绩：{{team.wins}}-{{team.draws}}-{{team.losses}}</p>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <img src="../../assets/images/Team{{team.country}}.jpg" style="width: 100%;height: 100%">
+    </div>
+  </div>
+  <div nz-row style="margin-top: 5%">
+    <div nz-col [nzSpan]="3" [nzOffset]="2">
+      <p class="sf">队员数据</p>
+    </div>
+    <div nz-col [nzSpan]="20" [nzOffset]="2">
+      <nz-table #Table [nzData]="player">
+        <thead>
+        <tr>
+          <th>名字</th>
+          <th>位置</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of Table.data">
+          <td>{{data.name}}</td>
+          <td>{{data.position}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div nz-row style="margin-top: 10px;height: 100%;">
+    <div nz-col [nzSpan]="20" [nzOffset]="2" style="background-image: url(../../assets/images/teambackground.png)">
+      <p style="" class="bf">巴西</p>
+      <img src="../../assets/images/Brazil.png" style="width: 30%;height: 30%">
+      <p style="margin-top: 10%" class="sf">当前战绩：</p>
+    </div>
+    <div nz-col [nzSpan]="20" [nzOffset]="2">
+      <img src="../../assets/images/TeamBrazil.jpg" style="width: 100%;height: 100%">
+    </div>
+  </div>
+  <div nz-row style="margin-top: 5%">
+    <div nz-col [nzSpan]="5" [nzOffset]="2">
+      <p class="sf">队员数据</p>
+    </div>
+    <div nz-col [nzSpan]="20" [nzOffset]="2">
+      <nz-table>
+        <thead>
+        <tr>
+          <th>名字</th>
+          <th>位置</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>
