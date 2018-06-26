@@ -8,14 +8,6 @@
     <embed src='https://player.youku.com/player.php/sid/XMzY1NTg3NzY2MA==/v.swf' allowFullScreen='true' quality='high'
            width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'>
   </div>
-  <!--<div nz-col [nzSpan]="4">-->
-  <!--<button nz-button="Primary" style="float: left;margin-top: 29%;max-width: 100%;width:100%;height:0;padding-bottom: 64%;background-color: darkblue;color: white;font-size: xx-large;vertical-align: middle;line-height: 250%">简介<i-->
-  <!--class="anticon anticon-right"></i></button>-->
-  <!--<button nz-button="Primary" style="float: left;max-width: 100%;width:100%;height:0;padding-bottom: 63%;background-color: darkblue;color: white;font-size: large;vertical-align: middle;line-height: 350%">比赛流程<i-->
-  <!--class="anticon anticon-right"></i></button>-->
-  <!--<button nz-button="Primary" style="float: left;max-width: 100%;width:100%;height:0;padding-bottom: 64%;background-color: darkblue;color: white;font-size: large;vertical-align: middle;line-height: 350%">绝对巨星<i-->
-  <!--class="anticon anticon-right"></i></button>-->
-  <!--</div>-->
 </div>
 <div>
   <div style="background-color: orangered">
@@ -76,62 +68,13 @@
   <div style="background-color: green">
     <div style="text-align: center"><img src="../../assets/images/logo2.png"></div>
     <ul nz-row>
-      <a routerLink="/author/{{author.id}}" *ngFor="let author of authors">
-        <li nz-col [nzSpan]="6">
+      <li nz-col [nzSpan]="6" *ngFor="let author of authors">
+        <a routerLink="/author/{{author.id}}">
           <div>
             <img src="../../assets/images/{{author.code}}.png" class="author">
           </div>
-        </li>
-      </a>
-      <!--<li nz-col [nzSpan]="6">-->
-      <!--<div>-->
-      <!--<a>-->
-      <!--<img src="../../assets/images/cluo.png" class="author">-->
-      <!--</a>-->
-      <!--</div>-->
-      <!--</li>-->
-      <!--<li nz-col [nzSpan]="6">-->
-      <!--<div>-->
-      <!--<a>-->
-      <!--<img src="../../assets/images/geliziman.png" class="author">-->
-      <!--</a>-->
-      <!--</div>-->
-      <!--</li>-->
-      <!--<li nz-col [nzSpan]="6">-->
-      <!--<div>-->
-      <!--<a>-->
-      <!--<img src="../../assets/images/jluo.png" class="author">-->
-      <!--</a>-->
-      <!--</div>-->
-      <!--</li>-->
-      <!--<li nz-col [nzSpan]="6">-->
-      <!--<div>-->
-      <!--<a>-->
-      <!--<img src="../../assets/images/suyaleisi.png" class="author">-->
-      <!--</a>-->
-      <!--</div>-->
-      <!--</li>-->
-      <!--<li nz-col [nzSpan]="6">-->
-      <!--<div>-->
-      <!--<a>-->
-      <!--<img src="../../assets/images/neimaer.png" class="author">-->
-      <!--</a>-->
-      <!--</div>-->
-      <!--</li>-->
-      <!--<li nz-col [nzSpan]="6">-->
-      <!--<div>-->
-      <!--<a>-->
-      <!--<img src="../../assets/images/yiniesita.png" class="author">-->
-      <!--</a>-->
-      <!--</div>-->
-      <!--</li>-->
-      <!--<li nz-col [nzSpan]="6">-->
-      <!--<div>-->
-      <!--<a>-->
-      <!--<img src="../../assets/images/mule.png" class="author">-->
-      <!--</a>-->
-      <!--</div>-->
-      <!--</li>-->
+        </a>
+      </li>
     </ul>
   </div>
 </div>

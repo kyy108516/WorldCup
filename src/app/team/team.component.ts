@@ -36,7 +36,6 @@ export class TeamComponent implements OnInit {
       this.loading = false;
       return;
     }
-    console.log(this.cnt);
     this.cnt += 5;
     this.tempTeams = this.teams.slice(0, this.cnt);
     this.loading = false;
