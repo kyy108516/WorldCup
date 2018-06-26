@@ -4,11 +4,8 @@
   [nzRenderItem]="item"
   [nzPagination]="pagination">
   <ng-template #item let-it>
-    <nz-list-item [nzContent]="it.description" [nzActions]="[starAction,likeAction]" [nzExtra]="extra">
-      <ng-template #starAction><i class="anticon anticon-star-o" style="margin-right: 8px;"></i> 156</ng-template>
-      <ng-template #likeAction><i class="anticon anticon-like-o" style="margin-right: 8px;"></i> 156</ng-template>
+    <nz-list-item [nzContent]="it.description" [nzExtra]="extra">
       <nz-list-item-meta
-        [nzAvatar]="it.avatar"
         [nzTitle]="nzTitle"
         [nzDescription]="it.provider[0].name">
         <ng-template #nzTitle><a href="{{it.url}}" target="_blank">{{it.name}}</a></ng-template>

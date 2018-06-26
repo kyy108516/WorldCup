@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NewsService} from '../news.service';
+import {News} from '../news';
 
 @Component({
   selector: 'app-news',
@@ -7,7 +8,7 @@ import {NewsService} from '../news.service';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-  news: any[];
+  news: News[];
 
   constructor(private newsService: NewsService) {
   }

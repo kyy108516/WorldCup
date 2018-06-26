@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Location} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 import {Author} from '../author';
 
@@ -91,7 +90,7 @@ export class AuthorComponent implements OnInit {
     'place': '中场'
   }];
 
-  id: String;
+  id: string;
   constructor(private route: ActivatedRoute) {
   }
 
