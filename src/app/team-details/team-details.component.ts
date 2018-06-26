@@ -3709,6 +3709,8 @@ export class TeamDetailsComponent implements OnInit {
   }];
 
   team: Team;
+  code: string;
+  player: Player[];
 
   constructor(private route: ActivatedRoute,
               private teamService: TeamService) {
@@ -3724,5 +3726,9 @@ export class TeamDetailsComponent implements OnInit {
       this.team = teams.filter(itt =>
         itt.fifa_code === code)[0];
     });
+    const c = this.team.country;
+    this.player = this.players.filter(itt =>
+      itt.country === c);
+    console.log(this.player);
   }
 }
