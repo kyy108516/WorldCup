@@ -4105,6 +4105,10 @@ ng-zorro-antd@^1.0.0:
     "@angular/cdk" "^6.0.0"
     date-fns "^1.29.0"
 
+ngx-disqus@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/ngx-disqus/-/ngx-disqus-2.3.7.tgz#9b16dd37b634abc162ae6da22402cee891c4105a"
+
 ngx-infinite-scroll@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/ngx-infinite-scroll/-/ngx-infinite-scroll-6.0.1.tgz#571e54860ce32839451569bcf6e7a63cfae327bd"

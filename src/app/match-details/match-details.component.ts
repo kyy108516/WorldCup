@@ -11,14 +11,17 @@ import {ActivatedRoute} from '@angular/router';
 export class MatchDetailsComponent implements OnInit {
   match: Match;
   flag = false;
+  pageId: string;
 
   constructor(private matchService: MatchService,
               private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params =>
-      this.getMatch(params['id'])
+    this.route.params.subscribe(params => {
+        this.getMatch(params['id']);
+        this.pageId = params['id'];
+      }
     );
   }
 
