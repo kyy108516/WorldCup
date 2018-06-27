@@ -53,8 +53,8 @@ export class TeamComponent implements OnInit {
       this.teamService.groupResult
         .subscribe(teams => {
           this.flag = true;
-          this.teams = teams[id].group.teams.map(it => it.team);
-          this.tempTeams = this.teams.slice(0, this.cnt);
+          this.tempTeams = teams[id].ordered_teams;
+          this.teams = this.tempTeams;
         });
     }
   }
