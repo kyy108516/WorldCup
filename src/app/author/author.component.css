@@ -12,6 +12,11 @@ ul li{
   display: none;
 }
 
+[nz-carousel-content]{
+  text-align: center;
+  overflow: hidden;
+}
+
 @media all and (max-width: 768px) {
 
   .l {
