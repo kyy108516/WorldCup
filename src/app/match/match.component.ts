@@ -11,7 +11,7 @@ import {ActivatedRoute} from '@angular/router';
 export class MatchComponent implements OnInit {
   tempMatches: Match[];
   matches: Match[];
-  loading = false;
+  loading = true;
   hasMore = true;
   cnt = 5;
 
@@ -31,12 +31,14 @@ export class MatchComponent implements OnInit {
       this.matchService.allMatches
         .subscribe(matches => {
           this.matches = matches;
+          this.loading = false;
           this.tempMatches = this.matches.slice(0, this.cnt);
         });
     } else {
       this.matchService.getMatchesByCountry(id)
         .subscribe(matches => {
           this.matches = matches;
+          this.loading = false;
           this.tempMatches = this.matches.slice(0, this.cnt);
         });
     }
