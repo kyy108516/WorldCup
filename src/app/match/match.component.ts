@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Match} from '../match';
 import {MatchService} from '../match.service';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-match',
@@ -15,33 +14,20 @@ export class MatchComponent implements OnInit {
   hasMore = true;
   cnt = 5;
 
-  constructor(private matchService: MatchService,
-              private route: ActivatedRoute) {
+  constructor(private matchService: MatchService) {
   }
 
   ngOnInit() {
-    this.route.params
-      .subscribe(params =>
-        this.getAllMatches(params['id'])
-      );
+    this.getAllMatches();
   }
 
-  getAllMatches(id: string): void {
-    if (id === 'all') {
-      this.matchService.allMatches
-        .subscribe(matches => {
-          this.matches = matches;
-          this.loading = false;
-          this.tempMatches = this.matches.slice(0, this.cnt);
-        });
-    } else {
-      this.matchService.getMatchesByCountry(id)
-        .subscribe(matches => {
-          this.matches = matches;
-          this.loading = false;
-          this.tempMatches = this.matches.slice(0, this.cnt);
-        });
-    }
+  getAllMatches(): void {
+    this.matchService.allMatches
+      .subscribe(matches => {
+        this.matches = matches;
+        this.loading = false;
+        this.tempMatches = this.matches.slice(0, this.cnt);
+      });
   }
 
   onScroll(): void {
