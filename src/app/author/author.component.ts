@@ -10,7 +10,7 @@ import {DataService} from '../data.service';
 })
 export class AuthorComponent implements OnInit {
   authors: Author[];
-
+  array = [1, 2, 3, 4];
   id: string;
 
   constructor(private route: ActivatedRoute) {

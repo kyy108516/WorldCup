@@ -34,13 +34,22 @@
     </div>
   </div>
   <div nz-col [nzSpan]="12">
-    <img src="../../assets/images/big{{authors[id].code}}.jpg" style="width: 100%;">
+    <nz-carousel nzAutoPlay>
+      <div nz-carousel-content *ngFor="let index of array">
+        <img src="../../assets/images/big{{authors[id].code}}{{index}}.jpg" style="width: 100%">
+      </div>
+    </nz-carousel>
+    <!--<img src="../../assets/images/big{{authors[id].code}}1.jpg" style="width: 100%;">-->
   </div>
 </div>
 
 <div nz-row class="s">
   <div nz-col [nzSpan]="24">
-    <img src="../../assets/images/big{{authors[id].code}}.jpg" style="width: 100%;">
+    <nz-carousel nzAutoPlay>
+      <div nz-carousel-content *ngFor="let index of array">
+        <img src="../../assets/images/big{{authors[id].code}}{{index}}.jpg" style="width: 100%">
+      </div>
+    </nz-carousel>
   </div>
   <div nz-col [nzSpan]="24">
     <div>
