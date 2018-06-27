@@ -41,7 +41,7 @@
         <nz-list-item-meta [nzTitle]="nzTitle">
           <ng-template #nzTitle>
             <a routerLink="/team_details/{{team?.fifa_code}}">
-              <nz-card style="width:100%;" nzTitle="{{team?.group_letter}} {{team?.country}}">
+              <nz-card style="width:100%;" nzTitle="{{team?.country}}">
                 <div nz-row nzType="flex" nzJustify="center" nzAlign="middle" nzGutter="16">
                   <img nz-col nzXs="8" nzSm="7" nzMd="6" nzLg="5" nzXl="4"
                        src="../../assets/images/{{team?.country}}.png">

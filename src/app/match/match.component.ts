@@ -52,7 +52,6 @@ export class MatchComponent implements OnInit {
       this.loading = false;
       return;
     }
-    console.log(this.cnt);
     this.cnt += 5;
     this.tempMatches = this.matches.slice(0, this.cnt);
     this.loading = false;

@@ -18,10 +18,6 @@ export class TeamService {
     this.groupResult = this.getGroupResult().pipe(shareReplay());
   }
 
-  getAllTeams(): Observable<Team[]> {
-    return this.http.get<Team[]>(`${this.url}`);
-  }
-
   getAllTeamsWithResults(): Observable<Team[]> {
     return this.http.get<Team[]>(`${this.url}results`);
   }

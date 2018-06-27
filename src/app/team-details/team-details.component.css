@@ -1,31 +1,35 @@
-.l{
+.l {
   display: block;
 }
 
-.s{
+.s {
   display: none;
 }
 
-.bf{
+.bf {
   font-size: xx-large;
   font-weight: bold
 }
 
-.sf{
+.sf {
   font-size: large;
   font-weight: normal;
 }
+
 @media all and (max-width: 768px) {
-  .sf{
+  .sf {
     font-size: small;
   }
-  .bf{
+
+  .bf {
     font-size: medium;
   }
-  .l{
+
+  .l {
     display: none;
   }
-  .s{
+
+  .s {
     display: block;
   }
 }

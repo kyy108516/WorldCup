@@ -16,13 +16,16 @@ export class DateComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.matchService.getMatchesByDate(format(this.selectedValue, 'YYYY-MM-DD'))
+      .subscribe(matches => {
+        this.matches = matches;
+      });
   }
 
   change(date: Date) {
     console.log(format(date, 'YYYY-MM-DD'));
     this.matchService.getMatchesByDate(format(date, 'YYYY-MM-DD'))
       .subscribe(matches => {
-        console.log(matches);
         this.matches = matches;
       });
   }
