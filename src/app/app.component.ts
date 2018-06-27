@@ -8,7 +8,12 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'WorldCup';
   isCollapsed = false;
+  visibility = false;
 
   constructor() {
+  }
+
+  ended() {
+    this.visibility = true;
   }
 }

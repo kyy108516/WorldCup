@@ -54,7 +54,8 @@ export class SearchComponent implements OnInit {
 
   change(value: string) {
     this.filteredOptions = Object.keys(this.map)
-      .filter(option => option.toLowerCase().indexOf(value.toLowerCase()) === 0);
+      .filter(option =>
+        option.toLowerCase().indexOf(value.toLowerCase()) === 0);
     if (this.map[value] != null) {
       this.matchService.getMatchesByCountry(this.map[value])
         .subscribe(matches =>

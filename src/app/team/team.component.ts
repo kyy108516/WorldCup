@@ -11,7 +11,7 @@ import {ActivatedRoute} from '@angular/router';
 export class TeamComponent implements OnInit {
   teams: Team[];
   tempTeams: Team[];
-  loading = false;
+  loading = true;
   hasMore = true;
   cnt = 5;
   flag = false;
@@ -47,12 +47,14 @@ export class TeamComponent implements OnInit {
         .subscribe(teams => {
           this.flag = false;
           this.teams = teams;
+          this.loading = false;
           this.tempTeams = this.teams.slice(0, this.cnt);
         });
     } else {
       this.teamService.groupResult
         .subscribe(teams => {
           this.flag = true;
+          this.loading = false;
           this.tempTeams = teams[id].ordered_teams;
           this.teams = this.tempTeams;
         });

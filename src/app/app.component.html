@@ -1,3 +1,6 @@
+<video [ngClass]="{v:visibility}" class="s" (ended)="ended()"
+       src="//activity.hdslb.com/blackboard/static/20180526/491d90335af7384363d82d8e3fbfcb30/videos/121nrzvrx4.mp4"
+       autoplay style="z-index: 9999;position:fixed;height: 100%; width: 100%"></video>
 <nz-layout style="height: 100%;">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'"
             style="z-index: 99999">
@@ -20,7 +23,7 @@
         </a>
       </li>
       <li nz-menu-item>
-        <a routerLink="/matches/all">
+        <a routerLink="/matches">
           <span>
             <i class="anticon anticon-database"></i>
             <span class="nav-text">Matches</span>
